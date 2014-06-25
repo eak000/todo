@@ -95,6 +95,9 @@ ul {
 
 li {
 	padding: 5px 0;
+	display: inline-flex;
+	margin: 2px;
+	width: 100%;
 	/*text-indent: -1em;*/
 }
 
@@ -107,6 +110,8 @@ li.unchecked:before {
     width: 1.4em;
     font-size: 1.3em;
 		opacity: .2;
+		padding-top: 5px;
+		padding-right: 5px;
 }
 
 li.checked:before {
@@ -115,6 +120,8 @@ li.checked:before {
     float: left;
     width: 1.4em;
     font-size: 1.3em;
+    padding-top: 5px;
+		padding-right: 5px;
 }
 /*delete icon*/
 
@@ -125,6 +132,8 @@ li:after {
     width: 1.4em;
     font-size: 1.3em;
 		opacity: .2;
+		padding-top: 5px;
+		padding-left: 5px;
 }
 
 /*text area styling*/
