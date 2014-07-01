@@ -2,11 +2,11 @@
 
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?li7n8w');
-	src:url('../fonts/icomoon.eot?#iefixli7n8w') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?li7n8w') format('woff'),
-		url('../fonts/icomoon.ttf?li7n8w') format('truetype'),
-		url('../fonts/icomoon.svg?li7n8w#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?-42mwr');
+	src:url('../fonts/icomoon.eot?#iefix-42mwr') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-42mwr') format('woff'),
+		url('../fonts/icomoon.ttf?-42mwr') format('truetype'),
+		url('../fonts/icomoon.svg?-42mwr#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -25,18 +25,6 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-star:before {
-	content: "\e602";
-}
-.icon-close:before {
-	content: "\e601";
-}
-.icon-checkmark:before {
-	content: "\e600";
-}
-.icon-checkmark2:before {
-	content: "\e603";
-}
 
 /*body style*/
 
@@ -101,9 +89,39 @@ li {
 	/*text-indent: -1em;*/
 }
 
+/*add item styling*/
+
+li.additem:before {
+	font-family: 'icomoon';
+    content: "\e604";
+    float: left;
+    width: 1.4em;
+    font-size: 1.2em;
+		opacity: .2;
+		padding-top: 5px;
+		padding-right: 10px;
+}
+
+li.additem:after {
+	font-family: sans-serif;
+    content: "!";
+    float: left;
+    width: 1.5em;
+    font-size: 1.8em;
+    font-style: bolder;
+    font-weight: 900;
+		opacity: .2;
+		padding-top: 5px;
+/*		padding-left: 3px;*/
+		text-align: center;
+}
 /*checkmarks*/
 
-li.unchecked:before {
+li.notdone {
+
+}
+
+li.notdone:before {
     font-family: 'icomoon';
     content: "\e603";
     float: left;
@@ -114,7 +132,13 @@ li.unchecked:before {
 		padding-right: 10px;
 }
 
-li.checked:before {
+}
+
+li.done {
+
+}
+
+li.done:before {
 		font-family: 'icomoon';
     content: "\e600";
     float: left;
@@ -123,9 +147,10 @@ li.checked:before {
     padding-top: 5px;
 		padding-right: 10px;
 }
+
 /*delete icon*/
 
-li:after {
+li.notdone:after, li.done:after {
     font-family: 'icomoon';
     content: "\e601";
     float: left;
@@ -135,6 +160,7 @@ li:after {
 		padding-top: 5px;
 		padding-left: 10px;
 }
+
 
 /*text area styling*/
 
@@ -150,6 +176,17 @@ input[type=text] {
 
 input.done[type=text] {
 	color: #BDBDBD;
+}
+
+p {
+	padding: 10px;
+	font-size: 1.1em;
+	font-weight: 600;
+	color: #666666;
+	font-family: sans-serif;
+	text-align: right;
+	margin-right: 100px;
+	letter-spacing: .5px;
 }
 
 .stars {
