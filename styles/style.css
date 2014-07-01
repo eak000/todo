@@ -97,7 +97,7 @@ li.additem:before {
     float: left;
     width: 1.4em;
     font-size: 1.2em;
-		opacity: .2;
+		/*opacity: .2;*/
 		padding-top: 5px;
 		padding-right: 10px;
 }
@@ -110,12 +110,13 @@ li.additem:after {
     font-size: 1.8em;
     font-style: bolder;
     font-weight: 900;
-		opacity: .2;
+	/*	opacity: .2;*/
 		padding-top: 5px;
 /*		padding-left: 3px;*/
 		text-align: center;
 }
-/*checkmarks*/
+
+/*not done styling*/
 
 li.notdone {
 
@@ -132,7 +133,7 @@ li.notdone:before {
 		padding-right: 10px;
 }
 
-}
+/*done styling*/
 
 li.done {
 
@@ -146,6 +147,10 @@ li.done:before {
     font-size: 1.3em;
     padding-top: 5px;
 		padding-right: 10px;
+}
+
+input.done[type=text] {
+	color: #BDBDBD;
 }
 
 /*delete icon*/
@@ -174,20 +179,10 @@ input[type=text] {
 	font-weight: 600;
 }
 
-input.done[type=text] {
+/*input.done[type=text] {
 	color: #BDBDBD;
-}
+}*/
 
-p {
-	padding: 10px;
-	font-size: 1.1em;
-	font-weight: 600;
-	color: #666666;
-	font-family: sans-serif;
-	text-align: right;
-	margin-right: 100px;
-	letter-spacing: .5px;
-}
 
 .stars {
 	width: 50%;
