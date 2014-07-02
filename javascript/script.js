@@ -14,15 +14,7 @@ $(document).ready(function(){
        				$("#list ul").append('<li><input type="text"></li>').val(new_task)
        				// $("this").addClass(".notdone")
        			};
-          // $("#change").addClass("button-disabled").removeClass("button");
-          // $("#change").attr("disabled","disabled");
-          //  }
-          //  else
-          //   {
-          //  $("#change").removeClass("button-disabled").addClass("button");
-          //  $("#change").removeAttr("disabled");
-          //   }
-          //   }
+        
     		 };
  
 	});
