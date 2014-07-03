@@ -12,11 +12,10 @@ $(document).ready(function(){
 
        			else {
               //add list item and give it notdone style
-       				$("#list ul").append('<li class="notdone"><span class="list_item">'+ $('#item').val() + '</span></li>');              
+       				$("#list ul").append('<li class="notdone"><span aria-hidden="true" data-icon="&#xe603;" class="unchecked"></span><span class="list_item">'+ $('#item').val() + '</span><span aria-hidden="true" data-icon="&#xe601;" class="delete"></span></li>');              
        				// clear input box
               $("#item").val("");
        		     };
-        
     		  };
  
 	 });

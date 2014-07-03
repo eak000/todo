@@ -102,27 +102,44 @@ li {
 		/*padding-right: 10px;*/
 /*}*/
 
-li.additem:after {
-		font-family: 'icomoon';
-    content: "\e604";
+.plus_sign, .delete {
     float: left;
     width: 1.4em;
     font-size: 1.2em;
-    /*font-style: bolder;*/
-    /*font-weight: 900;*/
-	/*	opacity: .2;*/
 		padding-top: 5px;
 		padding-left: 10px;
-		/*text-align: center;*/
+}
+
+.unchecked, .checked {
+	 	float: left;
+    width: 1.4em;
+    font-size: 1.3em;
+		opacity: .2;
+		padding-top: 5px;
+		padding-right: 10px;
+}
+
+
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none; 
 }
 
 /*not done styling*/
 
-li.notdone {
+/*li.notdone {
+		font-family: 'icomoon';
+    content: "\e603";
+    float: left;
+    width: 1.4em;
+    font-size: 1.3em;
+		opacity: .2;
+		padding-top: 5px;
+		padding-right: 10px;
+}*/
 
-}
-
-li.notdone:before {
+/*li.notdone:before {
     font-family: 'icomoon';
     content: "\e603";
     float: left;
@@ -131,7 +148,7 @@ li.notdone:before {
 		opacity: .2;
 		padding-top: 5px;
 		padding-right: 10px;
-}
+}*/
 
 /*done styling*/
 
@@ -154,17 +171,6 @@ input.done[type=text] {
 }
 
 /*delete icon*/
-
-li.notdone:after, li.done:after {
-    font-family: 'icomoon';
-    content: "\e601";
-    float: left;
-    width: 1.4em;
-    font-size: 1.3em;
-		opacity: .2;
-		padding-top: 5px;
-		padding-left: 10px;
-}
 
 
 /*text area styling*/
