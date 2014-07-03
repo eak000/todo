@@ -11,8 +11,10 @@ $(document).ready(function(){
 
        				var new_task = $('#item').val();
        				alert(new_task);
-       				$("#list ul").append('<li><input type="text"></li>').val(new_task)
-       				// $("this").addClass(".notdone")
+       				$("#list ul").append('<li><span class="list_item"></span></li>');              // $(".list_item").
+       				$(".list_item").text(new_task);
+              $(".list_item").addClass("notdone");
+              
        			};
         
     		 };
