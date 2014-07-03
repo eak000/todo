@@ -17,6 +17,11 @@ $(document).ready(function(){
               $("#item").val("");
        		     };
     		  };
- 
+       
+       $(".unchecked").click(function() {
+          alert("you clicked the check!");
+        });
 	 });
+
+
 });
