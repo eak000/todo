@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
-  $("#addToList").click(function(){
-      addItems();
+  $("#addToList").click(function(e){
+      addItems(e);
 })
 
       var uncheck= "&#xe603;"
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 
         if (e.keyCode == 13) {
-          addItems();
+          addItems(e);
 
     		  };
        
@@ -22,8 +22,8 @@ $(document).ready(function(){
 
         });
 	 });
-        var addItems =function() {
-              event.preventDefault();
+        var addItems =function(e) {
+              e.preventDefault();
 
             //make sure the input isn't blank
             if($("#item").val()=='') {
