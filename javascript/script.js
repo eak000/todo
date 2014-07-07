@@ -17,9 +17,12 @@ $(document).ready(function(){
        
        $(".unchecked").click(function() {
           // alert($(this));
-
-          $(this).attr('data-icon', check).addClass('ui-icon-check');
-
+          if ($(this).attr('data-icon') == '\ue603') {
+            $(this).attr('data-icon', '\ue600')
+          }
+          else {
+            $(this).attr('data-icon', '\ue603')
+          };
         });
 	 });
         var addItems =function(e) {
