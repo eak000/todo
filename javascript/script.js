@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $("#addToList").on("click", function(e){
       addItems(e);
-})
+  })
 
       var uncheck= "&#xe603;"
       var check= "&#xe600;"
@@ -24,7 +24,17 @@ $(document).ready(function(){
           else {
             $(this).attr('data-icon', '\ue603').removeClass("done").addClass("notdone")
           };
+
+          if ($("span.checkmark").is(".done")) {
+            // $("#list").prev(".list_item").addClass("grayedout")
+            $(this).next().addClass("grayedout")
+            // alert(next());
+           }
+           else {
+            $(this).next().removeClass("grayedout")
+           };
         });
+
 	 });
         var addItems =function(e) {
               e.preventDefault();
@@ -35,8 +45,8 @@ $(document).ready(function(){
               }
 
             else {
-              //add list item and give it notdone style
-              $("#list ul").append('<li class="notdone"><span aria-hidden="true" data-icon= '+ uncheck +' class="checkmark undone"></span><span class="list_item">'+ $('#item').val() + '</span><span aria-hidden="true" data-icon="&#xe601;" class="delete"></span></li>');              
+              //add list item 
+              $("#list ul").append('<li><span aria-hidden="true" data-icon= '+ uncheck +' class="checkmark"></span><span class="list_item">'+ $('#item').val() + '</span><span aria-hidden="true" data-icon="&#xe601;" class="delete"></span></li>');              
               // clear input box
               $("#item").val("");
                };
