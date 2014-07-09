@@ -28,12 +28,18 @@ $(document).ready(function(){
           if ($("span.checkmark").is(".done")) {
             // $("#list").prev(".list_item").addClass("grayedout")
             $(this).next().addClass("grayedout")
-            // alert(next());
+            // alert(this);
            }
            else {
             $(this).next().removeClass("grayedout")
            };
+
         });
+
+        $(".delete").on("click", function() {
+            // alert("delete me!");
+            $(this).closest("li").remove();
+          });
 
 	 });
         var addItems =function(e) {
