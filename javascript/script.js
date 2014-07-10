@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+  // function to use add list items
   $("#addToList").on("click", function(e){
       addItems(e);
   })
@@ -7,6 +8,7 @@ $(document).ready(function(){
       var uncheck= "&#xe603;"
       var check= "&#xe600;"
 
+  // function to use enter key
 	$("#item").on("keypress", function(e) {
 
 
@@ -15,6 +17,7 @@ $(document).ready(function(){
 
     		  };
        
+       // toggles checkmark between done and undone state
        $(".checkmark").on("click", function() {
           // alert($(this));
 
@@ -25,8 +28,9 @@ $(document).ready(function(){
             $(this).attr('data-icon', '\ue603').removeClass("done").addClass("notdone")
           };
 
-          if ($("span.checkmark").is(".done")) {
-            // $("#list").prev(".list_item").addClass("grayedout")
+          // grays out text on done items
+          if ($(this).is(".done")) {
+          
             $(this).next().addClass("grayedout")
             // alert(this);
            }
@@ -36,6 +40,7 @@ $(document).ready(function(){
 
         });
 
+       // function to delete items
         $(".delete").on("click", function() {
             // alert("delete me!");
             $(this).closest("li").remove();
