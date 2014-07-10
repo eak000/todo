@@ -16,37 +16,49 @@ $(document).ready(function(){
           addItems(e);
 
     		  };
+    });         
        
        // toggles checkmark between done and undone state
-       $(".checkmark").on("click", function() {
-          // alert($(this));
+  
+         // $(".checkmark").on("click", function() {
+         //  // alert($(this));
 
-          if ($(this).attr('data-icon') == '\ue603') {
-            $(this).attr('data-icon', '\ue600').removeClass("notdone").addClass("done")
-          }
-          else {
-            $(this).attr('data-icon', '\ue603').removeClass("done").addClass("notdone")
-          };
+         //  if ($(this).attr('data-icon') == '\ue603') {
+         //    $(this).attr('data-icon', '\ue600').removeClass("notdone").addClass("done")
+         //  }
+         //  else {
+         //    $(this).attr('data-icon', '\ue603').removeClass("done").addClass("notdone")
+         //  };
 
-          // grays out text on done items
-          if ($(this).is(".done")) {
+         //  // grays out text on done items
+         //  if ($(this).is(".done")) {
           
-            $(this).next().addClass("grayedout")
-            // alert(this);
-           }
-           else {
-            $(this).next().removeClass("grayedout")
-           };
+         //    $(this).next().addClass("grayedout")
+         //    // alert(this);
+         //   }
+         //   else {
+         //    $(this).next().removeClass("grayedout")
+         //   };
+         // });
+
+        // toggles checkmark 
+
+        $('.list').on("click", '.checkmark', function () {
+            // alert($(this));
+
+            var isDone = $(this).hasClass("done");
+            $(this).attr('data-icon', isDone ? '\ue603' : '\ue600').toggleClass("notdone", isDone).toggleClass("done", !isDone)
+
+            $(this).next().toggleClass("grayedout", !isDone)
 
         });
 
-       // function to delete items
-        $(".delete").on("click", function() {
+        $('.list').on("click", '.delete', function () {
             // alert("delete me!");
             $(this).closest("li").remove();
-          });
+        });
 
-	 });
+
         var addItems =function(e) {
               e.preventDefault();
 
