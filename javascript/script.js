@@ -69,7 +69,7 @@ $(document).ready(function(){
 
             else {
               //add list item 
-              $("#list ul").append('<li><span class="list_item">'+ $('#item').val() + '</span><span aria-hidden="true" data-icon= '+ uncheck +' class="checkmark"></span><span aria-hidden="true" data-icon="&#xe601;" class="delete"></span></li>');              
+              $("#list ul").append('<li><span aria-hidden="true" data-icon= '+ uncheck +' class="checkmark"></span><span class="list_item">'+ $('#item').val() + '</span><span aria-hidden="true" data-icon="&#xe601;" class="delete"></span></li>');              
               // clear input box
               $("#item").val("");
                };
