@@ -18,29 +18,7 @@ $(document).ready(function(){
     		  };
     });         
        
-       // toggles checkmark between done and undone state
-  
-         // $(".checkmark").on("click", function() {
-         //  // alert($(this));
-
-         //  if ($(this).attr('data-icon') == '\ue603') {
-         //    $(this).attr('data-icon', '\ue600').removeClass("notdone").addClass("done")
-         //  }
-         //  else {
-         //    $(this).attr('data-icon', '\ue603').removeClass("done").addClass("notdone")
-         //  };
-
-         //  // grays out text on done items
-         //  if ($(this).is(".done")) {
-          
-         //    $(this).next().addClass("grayedout")
-         //    // alert(this);
-         //   }
-         //   else {
-         //    $(this).next().removeClass("grayedout")
-         //   };
-         // });
-
+      
         // toggles checkmark 
 
         $('.list').on("click", '.checkmark', function () {
